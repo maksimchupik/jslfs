@@ -1,0 +1,21 @@
+aiogram>=3.0.0
+python-dotenv>=1.0.0
+
+# Telegram MTProto
+telethon>=1.34.0
+
+# LLM Integration
+openai>=1.0.0
+
+# API
+fastapi>=0.104.0
+uvicorn>=0.24.0
+pydantic>=2.0.0
+
+# Database (SQLite встроен, для PostgreSQL раскомментировать)
+# psycopg2-binary>=2.9.0
+
+# Build tools (для создания exe)
+pyinstaller>=6.0.0
+
+

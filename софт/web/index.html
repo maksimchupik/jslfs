@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Accounts Control Panel</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📱 Telegram Accounts Control Panel</h1>
+            <div class="header-actions">
+                <button id="refreshBtn" class="btn btn-primary">🔄 Обновить</button>
+            </div>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="accounts">Аккаунты</button>
+            <button class="tab-btn" data-tab="create">Создать аккаунт</button>
+            <button class="tab-btn" data-tab="settings">Настройки</button>
+        </nav>
+
+        <!-- Вкладка: Аккаунты -->
+        <div id="accounts-tab" class="tab-content active">
+            <div id="accounts-list" class="accounts-grid">
+                <!-- Аккаунты будут загружены динамически -->
+            </div>
+        </div>
+
+        <!-- Вкладка: Создать аккаунт -->
+        <div id="create-tab" class="tab-content">
+            <div class="form-container">
+                <h2>Создать новый аккаунт</h2>
+                <form id="create-account-form">
+                    <div class="form-group">
+                        <label for="phone_number">Номер телефона</label>
+                        <input type="text" id="phone_number" name="phone_number" placeholder="+1234567890" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="session_string">Session String</label>
+                        <textarea id="session_string" name="session_string" rows="3" placeholder="Вставьте session string" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="api_id">API ID</label>
+                        <input type="number" id="api_id" name="api_id" placeholder="12345678" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="api_hash">API Hash</label>
+                        <input type="text" id="api_hash" name="api_hash" placeholder="your_api_hash" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Создать аккаунт</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Вкладка: Настройки -->
+        <div id="settings-tab" class="tab-content">
+            <div class="settings-container">
+                <h2>Настройки API</h2>
+                <div class="form-group">
+                    <label for="api-url">API URL</label>
+                    <input type="text" id="api-url" value="http://localhost:8000" placeholder="http://localhost:8000">
+                    <button id="save-api-url" class="btn btn-secondary">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно для деталей аккаунта -->
+    <div id="account-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Содержимое будет загружено динамически -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Уведомления -->
+    <div id="notification" class="notification"></div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
+

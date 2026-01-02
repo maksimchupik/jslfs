@@ -1,0 +1,39 @@
+{
+  "accounts": [
+    {
+      "phone_number": "+1234567890",
+      "session_string": "YOUR_SESSION_STRING_HERE",
+      "api_id": 12345678,
+      "api_hash": "your_api_hash_here",
+      "personality": {
+        "base": {
+          "speech_style": "ироничный",
+          "message_length": "средний",
+          "emoji_usage": "редко",
+          "interests": ["IT", "крипта", "стартапы"],
+          "active_hours": {
+            "preferred": ["evening", "night"],
+            "timezone": "UTC+3"
+          },
+          "activity_probability": 0.35
+        },
+        "constraints": {
+          "personality_locked": false,
+          "evolution_enabled": true,
+          "autonomy_level": 0.8,
+          "banned_topics": [],
+          "banned_users": []
+        }
+      }
+    }
+  ],
+  "llm": {
+    "provider": "openai",
+    "api_key": "YOUR_OPENAI_API_KEY",
+    "model": "gpt-4o-mini"
+  },
+  "database": {
+    "path": "data/accounts.db"
+  }
+}
+
